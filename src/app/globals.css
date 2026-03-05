@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #020617;
+  --bg-elevated: #020617;
+  --card: #020617;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-sans, system-ui), ui-sans-serif, sans-serif;
+  background: #020617;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Mouse-reactive background layers */
+.mouse-gradient {
+  background: radial-gradient(
+      circle at var(--mouse-x) var(--mouse-y),
+      rgba(31, 79, 255, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at calc(100% - var(--mouse-x)) calc(100% - var(--mouse-y)),
+      rgba(255, 122, 60, 0.08) 0%,
+      transparent 45%
+    );
+  transition: background 0.15s ease-out;
+}
+
+.mouse-mesh {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(
+    ellipse 120% 120% at var(--mouse-x) var(--mouse-y),
+    black 0%,
+    transparent 70%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 120% 120% at var(--mouse-x) var(--mouse-y),
+    black 0%,
+    transparent 70%
+  );
+}
+
+.mouse-spot {
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.15) 0%,
+    transparent 70%
+  );
+  transition: left 0.2s ease-out, top 0.2s ease-out;
+}
+
+/* Entrance animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: fade-in-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-in-slow {
+  animation: fade-in-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-in-fade {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.08s; opacity: 0; }
+.delay-2 { animation-delay: 0.16s; opacity: 0; }
+.delay-3 { animation-delay: 0.24s; opacity: 0; }
+.delay-4 { animation-delay: 0.32s; opacity: 0; }
+.delay-5 { animation-delay: 0.4s; opacity: 0; }
+.delay-6 { animation-delay: 0.48s; opacity: 0; }
+.delay-7 { animation-delay: 0.56s; opacity: 0; }
+.delay-8 { animation-delay: 0.64s; opacity: 0; }
+.delay-9 { animation-delay: 0.72s; opacity: 0; }
+.delay-10 { animation-delay: 0.8s; opacity: 0; }
+.delay-11 { animation-delay: 0.88s; opacity: 0; }
+.delay-12 { animation-delay: 0.96s; opacity: 0; }
+.delay-13 { animation-delay: 1.04s; opacity: 0; }
+.delay-14 { animation-delay: 1.12s; opacity: 0; }
+.delay-15 { animation-delay: 1.2s; opacity: 0; }
+.delay-16 { animation-delay: 1.28s; opacity: 0; }
+.delay-17 { animation-delay: 1.36s; opacity: 0; }
+.delay-18 { animation-delay: 1.44s; opacity: 0; }
+.delay-19 { animation-delay: 1.52s; opacity: 0; }
+.delay-20 { animation-delay: 1.6s; opacity: 0; }
+
+.glass-card {
+  @apply bg-slate-900/70 border border-white/5 backdrop-blur-xl shadow-soft rounded-3xl;
+}
+
+.tag-pill {
+  @apply inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-slate-200 border border-white/10;
+}
+
+.topic-badge {
+  @apply inline-flex items-center rounded-full bg-primary-500/10 text-primary-200 border border-primary-500/30 px-3 py-1 text-xs font-medium;
+}
+
+.difficulty-pill {
+  @apply inline-flex items-center gap-1 rounded-full bg-slate-900/80 border border-white/10 px-2 py-1 text-[10px] uppercase tracking-wide;
+}
+
+.difficulty-pill-easy {
+  @apply text-emerald-300 border-emerald-500/40 bg-emerald-500/10;
+}
+
+.difficulty-pill-medium {
+  @apply text-amber-300 border-amber-500/40 bg-amber-500/10;
+}
+
+.difficulty-pill-hard {
+  @apply text-rose-300 border-rose-500/40 bg-rose-500/10;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/40 hover:bg-primary-400 transition-colors;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-100 hover:bg-white/10 transition-colors;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, #4b78ff, #ff7a3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
