@@ -66,7 +66,61 @@ body {
   transition: left 0.2s ease-out, top 0.2s ease-out;
 }
 
-/* Entrance animations */
+/* Text reveal animation */
+@keyframes text-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress bar fill animation */
+@keyframes progress-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.hover-glow {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(75, 120, 255, 0.3);
+}
+
+.progress-animate {
+  animation: progress-fill 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+  opacity: 0;
+  animation: text-reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -88,37 +142,37 @@ body {
 }
 
 .animate-in {
-  animation: fade-in-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-in-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-in-slow {
-  animation: fade-in-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-in-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-in-fade {
-  animation: fade-in 0.5s ease-out forwards;
+  animation: fade-in 0.7s ease-out forwards;
 }
 
-.delay-1 { animation-delay: 0.08s; opacity: 0; }
-.delay-2 { animation-delay: 0.16s; opacity: 0; }
-.delay-3 { animation-delay: 0.24s; opacity: 0; }
-.delay-4 { animation-delay: 0.32s; opacity: 0; }
-.delay-5 { animation-delay: 0.4s; opacity: 0; }
-.delay-6 { animation-delay: 0.48s; opacity: 0; }
-.delay-7 { animation-delay: 0.56s; opacity: 0; }
-.delay-8 { animation-delay: 0.64s; opacity: 0; }
-.delay-9 { animation-delay: 0.72s; opacity: 0; }
-.delay-10 { animation-delay: 0.8s; opacity: 0; }
-.delay-11 { animation-delay: 0.88s; opacity: 0; }
-.delay-12 { animation-delay: 0.96s; opacity: 0; }
-.delay-13 { animation-delay: 1.04s; opacity: 0; }
-.delay-14 { animation-delay: 1.12s; opacity: 0; }
-.delay-15 { animation-delay: 1.2s; opacity: 0; }
-.delay-16 { animation-delay: 1.28s; opacity: 0; }
-.delay-17 { animation-delay: 1.36s; opacity: 0; }
-.delay-18 { animation-delay: 1.44s; opacity: 0; }
-.delay-19 { animation-delay: 1.52s; opacity: 0; }
-.delay-20 { animation-delay: 1.6s; opacity: 0; }
+.delay-1 { animation-delay: 0.12s; opacity: 0; }
+.delay-2 { animation-delay: 0.24s; opacity: 0; }
+.delay-3 { animation-delay: 0.36s; opacity: 0; }
+.delay-4 { animation-delay: 0.48s; opacity: 0; }
+.delay-5 { animation-delay: 0.60s; opacity: 0; }
+.delay-6 { animation-delay: 0.72s; opacity: 0; }
+.delay-7 { animation-delay: 0.84s; opacity: 0; }
+.delay-8 { animation-delay: 0.96s; opacity: 0; }
+.delay-9 { animation-delay: 1.08s; opacity: 0; }
+.delay-10 { animation-delay: 1.20s; opacity: 0; }
+.delay-11 { animation-delay: 1.32s; opacity: 0; }
+.delay-12 { animation-delay: 1.44s; opacity: 0; }
+.delay-13 { animation-delay: 1.56s; opacity: 0; }
+.delay-14 { animation-delay: 1.68s; opacity: 0; }
+.delay-15 { animation-delay: 1.80s; opacity: 0; }
+.delay-16 { animation-delay: 1.92s; opacity: 0; }
+.delay-17 { animation-delay: 2.04s; opacity: 0; }
+.delay-18 { animation-delay: 2.16s; opacity: 0; }
+.delay-19 { animation-delay: 2.28s; opacity: 0; }
+.delay-20 { animation-delay: 2.40s; opacity: 0; }
 
 .glass-card {
   @apply bg-slate-900/70 border border-white/5 backdrop-blur-xl shadow-soft rounded-3xl;
@@ -157,7 +211,19 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(120deg, #4b78ff, #ff7a3c);
+  background: linear-gradient(135deg, #60a5fa, #f97316, #ec4899);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: brightness(1.2);
+}
+
+.gradient-text span {
+  background: linear-gradient(135deg, #60a5fa, #f97316, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: brightness(1.2);
 }

@@ -1,0 +1,25 @@
+/* [project]/src/app/sitefont_279a8401.module.css [app-client] (css) */
+@font-face {
+  font-family: siteFont;
+  src: url("../media/site-s.p.e611c711.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: siteFont Fallback;
+  src: local(Arial);
+  ascent-override: 99.94%;
+  descent-override: 25.98%;
+  line-gap-override: 0.0%;
+  size-adjust: 100.06%;
+}
+
+.sitefont_279a8401-module__-V3UTW__className {
+  font-family: siteFont, siteFont Fallback;
+}
+
+.sitefont_279a8401-module__-V3UTW__variable {
+  --font-sans: "siteFont", "siteFont Fallback";
+}
+
+/*# sourceMappingURL=src_app_sitefont_279a8401_module_css_bad6b30c._.single.css.map*/

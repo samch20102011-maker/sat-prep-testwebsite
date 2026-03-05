@@ -100,7 +100,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\User555\\Downloads\\Next.js Repository",
+    "outputFileTracingRoot": "C:\\Users\\User555\\Downloads\\Github Repositories\\sat-prep-testwebsite",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -293,11 +293,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "C:\\Users\\User555\\Downloads\\Next.js Repository"
+      "root": "C:\\Users\\User555\\Downloads\\Github Repositories\\sat-prep-testwebsite"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\User555\\Downloads\\Next.js Repository",
+  "appDir": "C:\\Users\\User555\\Downloads\\Github Repositories\\sat-prep-testwebsite",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

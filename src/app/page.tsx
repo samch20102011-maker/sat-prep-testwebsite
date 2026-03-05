@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { TopicGrid } from "@/components/TopicGrid";
+import { AnimatedText } from "@/components/AnimatedText";
+import { AnimatedProgressBar } from "@/components/AnimatedProgressBar";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -13,24 +15,49 @@ export default function HomePage() {
             <div className="pointer-events-none absolute -bottom-16 -left-10 h-40 w-40 rounded-full bg-accent-500/10 blur-3xl" />
 
             <div className="relative flex flex-col gap-4">
-              <p className="inline-flex items-center gap-2 self-start rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-emerald-200 animate-in-fade delay-1">
-                Designed for the new SAT
-              </p>
+              <AnimatedText 
+                text="Designed for the new SAT" 
+                className="inline-flex items-center gap-2 self-start rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-emerald-200 animate-in-fade delay-1"
+                delay={120}
+              />
               <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl animate-in delay-2">
-                Build <span className="gradient-text">SAT Math</span> muscle,
-                one question at a time.
+                <AnimatedText 
+                  text="Build " 
+                  delay={240}
+                  stagger={40}
+                />
+                <span className="gradient-text">
+                  <AnimatedText 
+                    text="SAT Math" 
+                    delay={500}
+                    stagger={40}
+                  />
+                </span>
+                <AnimatedText 
+                  text=" muscle," 
+                  delay={800}
+                  stagger={40}
+                />
+                <br className="hidden sm:block" />
+                <AnimatedText 
+                  text="one question at a time." 
+                  delay={1100}
+                  stagger={40}
+                />
               </h1>
               <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base animate-in delay-3">
-                Curated practice sets, realistic question styles, and instant
-                explanations—so you can move from guessing to knowing exactly
-                why each answer is right.
+                <AnimatedText 
+                  text="Curated practice sets, realistic question styles, and instant explanations—so you can move from guessing to knowing exactly why each answer is right."
+                  delay={360}
+                  stagger={15}
+                />
               </p>
 
               <div className="mt-1 flex flex-wrap items-center gap-3 animate-in delay-4">
-                <Link href="/practice" className="btn-primary">
+                <Link href="/practice" className="btn-primary hover-lift">
                   Start focused practice
                 </Link>
-                <Link href="/quiz" className="btn-ghost">
+                <Link href="/quiz" className="btn-ghost hover-lift">
                   Take a timed quiz
                 </Link>
                 <p className="text-xs text-slate-400">
@@ -60,7 +87,7 @@ export default function HomePage() {
                     Built for
                   </dt>
                   <dd className="mt-1 font-semibold text-slate-50">
-                    High schoolers shooting 600 → 750+
+                    High schoolers shooting 1500 → 1600+
                   </dd>
                 </div>
               </dl>
@@ -89,9 +116,11 @@ export default function HomePage() {
                 </span>
                 <span className="font-semibold text-emerald-200">80%+</span>
               </div>
-              <div className="h-2 w-full overflow-hidden rounded-full bg-slate-800">
-                <div className="h-full w-3/5 rounded-full bg-gradient-to-r from-primary-400 to-accent-500" />
-              </div>
+              <AnimatedProgressBar 
+                percentage={60} 
+                className="mt-3"
+                delay={1000}
+              />
               <div className="flex items-center justify-between text-xs text-slate-400">
                 <span>Suggested pace</span>
                 <span>~1 min / question</span>

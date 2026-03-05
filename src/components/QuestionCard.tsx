@@ -53,13 +53,13 @@ export function QuestionCard({
 
           let classes =
             base +
-            " bg-slate-900/60 border-white/10 hover:bg-slate-800/80";
+            " bg-slate-900/60 border-white/10 hover:bg-slate-800/80 hover-lift transition-all duration-300";
 
           if (selectedIndex !== null) {
             if (isAnswer) {
               classes =
                 base +
-                " bg-emerald-500/15 border-emerald-400/60 text-emerald-100";
+                " bg-emerald-500/15 border-emerald-400/60 text-emerald-100 hover-glow";
             } else if (isChosen && !isAnswer) {
               classes =
                 base +
@@ -72,7 +72,7 @@ export function QuestionCard({
           } else if (isChosen) {
             classes =
               base +
-              " bg-primary-500/20 border-primary-400 text-primary-50 shadow-soft";
+              " bg-primary-500/20 border-primary-400 text-primary-50 shadow-soft hover-glow";
           }
 
           return (

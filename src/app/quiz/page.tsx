@@ -2,6 +2,8 @@
 
 import { Navbar } from "@/components/Navbar";
 import { QuestionCard } from "@/components/QuestionCard";
+import { AnimatedText } from "@/components/AnimatedText";
+import { AnimatedProgressBar } from "@/components/AnimatedProgressBar";
 import { questions } from "@/data/questions";
 import { useEffect, useMemo, useState } from "react";
 
@@ -75,14 +77,17 @@ export default function QuizPage() {
         <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between animate-in">
           <div>
             <p className="text-xs uppercase tracking-wide text-slate-400">
-              Timed quiz
+              <AnimatedText text="Timed quiz" delay={120} stagger={20} />
             </p>
             <h1 className="mt-1 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
-              10-question SAT-style sprint
+              <AnimatedText text="10-question SAT-style sprint" delay={200} stagger={25} />
             </h1>
             <p className="mt-1 text-sm text-slate-300">
-              Simulate the pressure of the real test. When the clock hits zero,
-              your score locks in.
+              <AnimatedText 
+                text="Simulate the pressure of the real test. When the clock hits zero, your score locks in." 
+                delay={350} 
+                stagger={15} 
+              />
             </p>
           </div>
 
@@ -98,14 +103,11 @@ export default function QuizPage() {
                 </span>
               </div>
               <div className="h-2 w-32 overflow-hidden rounded-full bg-slate-800">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-primary-400 to-rose-400"
-                  style={{
-                    width: `${Math.max(
-                      5,
-                      (secondsLeft / (QUIZ_MINUTES * 60)) * 100
-                    )}%`
-                  }}
+                <AnimatedProgressBar 
+                  percentage={Math.max(5, (secondsLeft / (QUIZ_MINUTES * 60)) * 100)}
+                  delay={600}
+                  gradient={true}
+                  className="h-full"
                 />
               </div>
             </div>
@@ -150,7 +152,7 @@ export default function QuizPage() {
           <div className="mt-3 flex justify-end">
             <button
               type="button"
-              className="btn-primary"
+              className="btn-primary hover-lift hover-glow"
               onClick={() => setShowResults(true)}
             >
               Finish quiz and see score

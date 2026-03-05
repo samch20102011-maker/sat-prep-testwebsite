@@ -2,6 +2,8 @@
 
 import { Navbar } from "@/components/Navbar";
 import { QuestionCard } from "@/components/QuestionCard";
+import { AnimatedText } from "@/components/AnimatedText";
+import { AnimatedProgressBar } from "@/components/AnimatedProgressBar";
 import { questions, topics, type Topic, type Difficulty } from "@/data/questions";
 import { Suspense, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -63,14 +65,17 @@ function PracticeContent() {
         <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between animate-in">
           <div>
             <p className="text-xs uppercase tracking-wide text-slate-400">
-              Practice sets
+              <AnimatedText text="Practice sets" delay={120} stagger={20} />
             </p>
             <h1 className="mt-1 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
-              Targeted SAT math practice
+              <AnimatedText text="Targeted SAT math practice" delay={200} stagger={25} />
             </h1>
             <p className="mt-1 text-sm text-slate-300">
-              Filter by topic and difficulty, answer at your own pace, and
-              peek at explanations when you&apos;re ready.
+              <AnimatedText 
+                text="Filter by topic and difficulty, answer at your own pace, and peek at explanations when you're ready." 
+                delay={350} 
+                stagger={15} 
+              />
             </p>
           </div>
 
@@ -82,16 +87,10 @@ function PracticeContent() {
               </span>
             </div>
             <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-800">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-primary-400 to-accent-500"
-                style={{
-                  width:
-                    filteredQuestions.length === 0
-                      ? "0%"
-                      : `${Math.round(
-                          (correctCount / filteredQuestions.length) * 100
-                        )}%`
-                }}
+              <AnimatedProgressBar 
+                percentage={filteredQuestions.length === 0 ? 0 : Math.round((correctCount / filteredQuestions.length) * 100)}
+                delay={500}
+                gradient={true}
               />
             </div>
             <span className="text-[11px] text-slate-400">
@@ -113,11 +112,11 @@ function PracticeContent() {
                   <button
                     type="button"
                     onClick={() => setTopicFilter("all")}
-                    className={`rounded-full border px-3 py-1.5 ${
-                      topicFilter === "all"
-                        ? "border-primary-400 bg-primary-500/20 text-primary-50"
-                        : "border-white/10 bg-slate-900/60 text-slate-300 hover:bg-slate-800"
-                    }`}
+                    className={`rounded-full border px-3 py-1.5 transition-all duration-300 hover-lift ${
+                    topicFilter === "all"
+                      ? "border-primary-400 bg-primary-500/20 text-primary-50"
+                      : "border-white/10 bg-slate-900/60 text-slate-300 hover:bg-slate-800"
+                  }`}
                   >
                     All topics
                   </button>
@@ -126,7 +125,7 @@ function PracticeContent() {
                       key={topic.id}
                       type="button"
                       onClick={() => setTopicFilter(topic.id)}
-                      className={`truncate rounded-full border px-3 py-1.5 ${
+                      className={`truncate rounded-full border px-3 py-1.5 transition-all duration-300 hover-lift ${
                         topicFilter === topic.id
                           ? "border-primary-400 bg-primary-500/20 text-primary-50"
                           : "border-white/10 bg-slate-900/60 text-slate-300 hover:bg-slate-800"
@@ -150,7 +149,7 @@ function PracticeContent() {
                       onClick={() =>
                         setDifficultyFilter(option.id as Difficulty | "all")
                       }
-                      className={`rounded-full border px-3 py-1.5 ${
+                      className={`rounded-full border px-3 py-1.5 transition-all duration-300 hover-lift ${
                         difficultyFilter === option.id
                           ? "border-accent-500 bg-accent-500/20 text-accent-50"
                           : "border-white/10 bg-slate-900/60 text-slate-300 hover:bg-slate-800"
