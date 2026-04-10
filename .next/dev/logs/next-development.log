@@ -1,2 +1,182 @@
-[00:00:01.648] Server  LOG     ✓ Ready in 1080ms
-[00:00:05.465] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.096] Server  LOG     ✓ Ready in 3.8s
+[00:00:07.483] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:35.579] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:41.357] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:44.737] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:17.277] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:18.837] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:44.015] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:56.879] Server  ERROR   ⨯ ./src/app/about/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import Link from "next/link";
+  3 |
+  4 | export default function AboutPage() {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:08:56.997] Browser ERROR   ./src/app/about/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import Link from "next/link";
+  3 |
+  4 | export default function AboutPage() {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:08:58.036] Browser ERROR   ./src/app/about/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import Link from "next/link";
+  3 |
+  4 | export default function AboutPage() {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:08:58.161] Browser ERROR   ./src/app/about/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import Link from "next/link";
+  3 |
+  4 | export default function AboutPage() {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:08:59.914] Browser ERROR   uncaughtError: Error: ./src/app/about/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import Link from "next/link";
+  3 |
+  4 | export default function AboutPage() {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:09:00.944] Browser ERROR   ./src/app/about/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import Link from "next/link";
+  3 |
+  4 | export default function AboutPage() {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:00.944] Browser ERROR   ./src/app/about/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState } from "react";
+    |          ^^^^^^^^
+  2 | import Link from "next/link";
+  3 |
+  4 | export default function AboutPage() {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:11.430] Server  LOG     ✓ Compiled in 139ms
+[00:09:11.831] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:04.210] Server  ERROR   ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:04.530] Server  ERROR   ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:04.785] Server  ERROR   ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.031] Server  ERROR   ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:05.267] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <textarea value=... onChange={function onChange} className=... placeholder=...>
+                               ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:10:10.113] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:14.243] Browser ERROR   ./src/app/about/page.tsx:3:38
+Parsing ecmascript source code failed
+  1 | import Link from "next/link";
+  2 |
+> 3 | export default function AboutPage() {
+    |                                      ^
+
+Expected '}', got '<eof>'
+[00:15:20.199] Server  ERROR   ⨯ Error: The default export is not a React Component in "/about/page"
+[00:15:20.532] Server  ERROR   ⨯ Error: The default export is not a React Component in "/about/page"
+[00:15:20.964] Server  ERROR   ⨯ Error: The default export is not a React Component in "/about/page"
+[00:15:21.214] Server  ERROR   ⨯ Error: The default export is not a React Component in "/about/page"
+[00:15:21.529] Server  ERROR   ⨯ Error: The default export is not a React Component in "/about/page"
+[00:15:21.768] Server  ERROR   ⨯ Error: The default export is not a React Component in "/about/page"
+[00:15:21.946] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/about/page"
+[00:16:14.110] Server  LOG     ✓ Compiled in 108ms
+[00:16:14.617] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:10.385] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. G2

@@ -22,6 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={siteFont.variable}>
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+      </head>
       <body className="min-h-screen bg-slate-950 text-slate-50 antialiased font-sans">
         <MouseReactiveBackground />
         {children}

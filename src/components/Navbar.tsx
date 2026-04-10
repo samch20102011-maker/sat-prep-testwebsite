@@ -4,7 +4,8 @@ import { Suspense } from "react";
 const links = [
   { href: "/", label: "Overview" },
   { href: "/practice", label: "Practice Sets" },
-  { href: "/quiz", label: "Timed Quiz" }
+  { href: "/quiz", label: "Timed Quiz" },
+  { href: "/about", label: "About" }
 ];
 
 export function Navbar() {
@@ -13,13 +14,13 @@ export function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 hover-lift transition-all duration-300">
           <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-400 to-accent-500 shadow-soft">
-            <span className="text-lg font-black text-white">Σ</span>
+            <i className="fa-solid fa-calculator text-lg text-white"></i>
           </div>
           <div className="leading-tight">
             <p className="text-sm font-semibold tracking-tight text-slate-50">
               Summit SAT
             </p>
-            <p className="text-xs text-slate-400">Math Lab</p>
+            <p className="text-xs text-slate-400">Math Prep</p>
           </div>
         </Link>
 
